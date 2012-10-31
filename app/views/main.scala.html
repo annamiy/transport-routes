@@ -2,11 +2,63 @@
 
 <!DOCTYPE html>
 
-<html>
+<html xmlns="http://www.w3.org/1999/html">
     <head>
+        <link rel="shortcut icon" type="image/png" href="@routes.Assets.at("images/favicon.png")">
+
+        <link rel="stylesheet" media="screen" href="@routes.Assets.at("stylesheets/reset.css")">
+        <link rel="stylesheet" media="screen" href="@routes.Assets.at("stylesheets/main.css")">
+        <link rel="stylesheet" media="screen" href="@routes.Assets.at("stylesheets/css3-buttons.css")">
+        <link rel="stylesheet" media="screen" href="@routes.Assets.at("stylesheets/tiptip.css")">
+
+        <script src="http://code.jquery.com/jquery-1.8.2.min.js" type="text/javascript"></script>
+        <script src="@routes.Assets.at("javascripts/google-buttons/jquery.tiptip.js")" type="text/javascript"></script>
+        <script src="@routes.Assets.at("javascripts/script.js")" type="text/javascript"></script>
+
         <title>@title</title>
     </head>
     <body>
-        @content
+        <div id="container">
+
+             <!-- HEADER -->
+            <header>
+                <div class=header-first-part>
+                    <div class=routes-form>
+                        <a href="#" class=logo>
+                            <img src="@routes.Assets.at("images/train.png")">
+                        </a>
+                        <div class=header-buttons>
+                            <div class="buttons">
+                                <a href="#" class="button left"><span class="icon icon108"></span><span class="label">Просмотр маршрута</span></a>
+                                <a href="#" class="button middle"><span class="icon icon125"></span><span class="label red">Поиск маршрута</span></a>
+                                <a href="#" class="button middle"><span class="icon icon191"></span><span class="label blue">Ближайшие</span></a>
+                                <a href="#" class="button middle"><span class="icon icon151"></span><span class="label green">Green</span></a>
+                                <a href="#" class="button right"><span class="icon icon177"></span><span class="label yellow">Yellow</span></a>
+                            </div> <!-- /.buttons -->
+                            <div class="dropdown">
+                                <a href="#" class="button"><span class="label">File</span><span class="toggle"></span></a>
+                                <div class="dropdown-slider">
+                                    <a href="#" class="ddm"><span class="label">New</span></a>
+                                    <a href="#" class="ddm"><span class="label">Save</span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class=header-second-part></div>
+            </header>
+            <!-- END HEADER -->
+
+             <!-- MAIN CONTENT -->
+            <div id="content">
+                @content
+            </div>
+             <!-- END CONTENT -->
+
+             <!-- FOOTER -->
+            <footer>
+            </footer>
+            <!-- END FOOTER -->
+        </div>
     </body>
 </html>

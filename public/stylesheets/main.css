@@ -7,11 +7,10 @@ html, body {
 #container {
     min-height: 100%;
     position: relative;
+    background: #f1f1f1;
 }
 
 header {
-    background: #FFFFFF;
-    height: 130px;
 }
 
 #content {
@@ -27,3 +26,24 @@ footer {
     height: 45px; /* Height of the footer */
     background: url("../images/rubber_grip.png") repeat;
 }
+
+/*HEADER*/
+.header-first-part{
+    height: 80px;
+}
+.routes-form{
+    width: 1024px;
+    margin: auto;
+}
+.logo, .header-buttons{
+    display: inline-block;
+}
+.logo img{
+    width: 47px;
+    padding: 5px;
+}
+.header-second-part{
+    height: 40px;
+    border-top: 1px solid #e5e5e5;
+}
+/*END HEADER*/

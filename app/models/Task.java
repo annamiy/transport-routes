@@ -1,11 +1,34 @@
 package models;
 
-/**
- * Created with IntelliJ IDEA.
- * User: nosova
- * Date: 30.10.12
- * Time: 14:35
- * To change this template use File | Settings | File Templates.
- */
-public class Task {
+import java.util.*;
+
+import play.db.ebean.*;
+import play.data.validation.Constraints.*;
+
+import javax.persistence.*;
+
+@Entity
+public class Task extends Model {
+
+    @Id
+    public Long id;
+
+    @Required
+    public String label;
+
+    public static Finder<Long,Task> find = new Finder(
+            Long.class, Task.class
+    );
+
+    public static List<Task> all() {
+        return find.all();
+    }
+
+    public static void create(Task task) {
+        task.save();
+    }
+
+    public static void delete(Long id) {
+        find.ref(id).delete();
+    }
 }
